@@ -1,0 +1,24 @@
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>def main():\r\n    pass\r\n\r\nif __name__ == \"__main__\":\r\n    main()\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	(revision a79ddc2709bb375045e7f84eff52a0d00ec62014)
++++ b/main.py	(date 1677934195355)
+@@ -1,5 +1,12 @@
++from game import Game
++from game import SettingsGame
++import random
+ def main():
+-    pass
++    game = Game()
++    game.start()
++    settings = SettingsGame()
++    game.set_settings(settings)
++    game.play()
+ 
+ if __name__ == "__main__":
+     main()
